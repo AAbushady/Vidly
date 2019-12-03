@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
 using Vidly.Models;
 
@@ -9,12 +6,21 @@ namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
-        // GET: Movies/Random
-        public ActionResult Random()
+        // This allows us to return the list of movies to the view.
+        public ActionResult Index()
         {
-            var movie = new Movie() { Name = "Shrek!" };
+            var movies = GetMovies();
+            return View(movies);
+        }
 
-            return View(movie);
+        private IEnumerable<Movie> GetMovies()
+        {
+            // Movies are hardcoded for now, Entity Frameworks will be used later.
+            return new List<Movie>
+            {
+                new Movie { ID = 1, Name = "The Matrix" },
+                new Movie { ID = 2, Name = "Dragon Ball Super: Broly" }
+            };
         }
     }
 }
