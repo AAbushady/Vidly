@@ -31,7 +31,7 @@ namespace Vidly.Controllers
         public ActionResult Details(int id)
         {
             // This will get the customer id which can be used in the url.
-            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+            var customer = _context.Customers.Include(c => c.MembershipType).SingleOrDefault(c => c.Id == id);
 
             // If the customer id does not correspond to an existing customer user will be redirected to HttpNotFound page.
             if (customer == null)
