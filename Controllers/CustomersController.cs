@@ -7,10 +7,21 @@ namespace Vidly.Controllers
 {
     public class CustomersController : Controller
     {
+        // Allows Customers to be populated using the Customers Database.
+        private ApplicationDbContext _context;
+        public CustomersController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
         // This allows for us to return the list of customers to the view.
         public ViewResult Index()
         {
-            var customers = GetCustomers();
+            var customers = _context.Customers.ToList();
 
             return View(customers);
         }
@@ -19,7 +30,7 @@ namespace Vidly.Controllers
         public ActionResult Details(int id)
         {
             // This will get the customer id which can be used in the url.
-            var customer = GetCustomers().SingleOrDefault(c => c.Id == id);
+            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
 
             // If the customer id does not correspond to an existing customer user will be redirected to HttpNotFound page.
             if (customer == null)
@@ -28,16 +39,6 @@ namespace Vidly.Controllers
             }
 
             return View(customer);
-        }
-
-        private IEnumerable<Customer> GetCustomers()
-        {
-            // Customers are hardcoded, Entity Frameworks will be used later.
-            return new List<Customer>
-            {
-                new Customer { Id = 1, Name = "Tony Redgrave" },
-                new Customer { Id = 2, Name = "Cal Kestis" }
-            };
         }
     }
 }
