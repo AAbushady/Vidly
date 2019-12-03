@@ -19,6 +19,12 @@ namespace Vidly.Controllers
         {
             _context.Dispose();
         }
+
+        public ActionResult New()
+        {
+            return View();
+        }
+
         // This allows for us to return the list of customers to the view.
         public ViewResult Index()
         {
