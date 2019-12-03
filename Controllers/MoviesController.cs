@@ -1,26 +1,41 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
 using Vidly.Models;
+using System.Data.Entity;
+using System.Linq;
 
 namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
-        // This allows us to return the list of movies to the view.
+        private ApplicationDbContext _context;
+        public MoviesController()
+        {
+            _context = new ApplicationDbContext();
+        }
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
+        // Allows Movies to be populated using the Movies Database.
         public ActionResult Index()
         {
-            var movies = GetMovies();
+            var movies = _context.Movies.Include(m => m.Genre).ToList();
+            
             return View(movies);
         }
 
-        private IEnumerable<Movie> GetMovies()
+        public ActionResult Details(int id)
         {
-            // Movies are hardcoded for now, Entity Frameworks will be used later.
-            return new List<Movie>
+            var movie = _context.Movies.Include(m => m.Genre).SingleOrDefault(m => m.Id == id);
+
+            if (movie == null)
             {
-                new Movie { ID = 1, Name = "The Matrix" },
-                new Movie { ID = 2, Name = "Dragon Ball Super: Broly" }
-            };
+                return HttpNotFound();
+            }
+
+            return View(movie);
         }
     }
 }

@@ -221,9 +221,18 @@
     <Compile Include="Migrations\201912032027140_ChangeBirthDateFromStringToDateTime.designer.cs">
       <DependentUpon>201912032027140_ChangeBirthDateFromStringToDateTime.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912032050136_AddMovieProperties.cs" />
+    <Compile Include="Migrations\201912032050136_AddMovieProperties.designer.cs">
+      <DependentUpon>201912032050136_AddMovieProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912032157377_AddGenreAndProperties.cs" />
+    <Compile Include="Migrations\201912032157377_AddGenreAndProperties.designer.cs">
+      <DependentUpon>201912032157377_AddGenreAndProperties.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -384,7 +393,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Movies\Random.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
@@ -399,6 +407,7 @@
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -442,6 +451,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201912032027140_ChangeBirthDateFromStringToDateTime.resx">
       <DependentUpon>201912032027140_ChangeBirthDateFromStringToDateTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912032050136_AddMovieProperties.resx">
+      <DependentUpon>201912032050136_AddMovieProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912032157377_AddGenreAndProperties.resx">
+      <DependentUpon>201912032157377_AddGenreAndProperties.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
