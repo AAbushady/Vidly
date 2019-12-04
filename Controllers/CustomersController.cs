@@ -32,6 +32,12 @@ namespace Vidly.Controllers
             return View(viewModel);
         }
 
+        [HttpPost]
+        public ActionResult Create(Customer customer)
+        {
+            return View();
+        }
+
         // This allows for us to return the list of customers to the view.
         public ViewResult Index()
         {
