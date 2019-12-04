@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>New Customer</h2>
+<h2>@Model.Name</h2>
 
 @using (Html.BeginForm("Save", "Customers"))
 {
@@ -23,7 +23,7 @@
         @Html.DropDownListFor(c => c.Customer.MembershipTypeId, new SelectList(Model.MembershipTypes, "Id", "Name"), "Select Membership Type", new { @class = "form-control" })
     </div>
 
-    <div class="checkbox">
+    <div class="form-check">
         <label>
             @Html.CheckBoxFor(c => c.Customer.IsSubscribedToNewsletter) Subscribe to Newsletter?
         </label>
