@@ -229,6 +229,10 @@
     <Compile Include="Migrations\201912032157377_AddGenreAndProperties.designer.cs">
       <DependentUpon>201912032157377_AddGenreAndProperties.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912042324497_UpdateMovieDatabaseRemoveRequiredDateAdded.cs" />
+    <Compile Include="Migrations\201912042324497_UpdateMovieDatabaseRemoveRequiredDateAdded.designer.cs">
+      <DependentUpon>201912042324497_UpdateMovieDatabaseRemoveRequiredDateAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -462,6 +466,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201912032157377_AddGenreAndProperties.resx">
       <DependentUpon>201912032157377_AddGenreAndProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912042324497_UpdateMovieDatabaseRemoveRequiredDateAdded.resx">
+      <DependentUpon>201912042324497_UpdateMovieDatabaseRemoveRequiredDateAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

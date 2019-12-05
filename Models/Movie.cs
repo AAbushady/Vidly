@@ -19,10 +19,10 @@ namespace Vidly.Models
         [Display(Name = "Release Date")]
         [Required]
         public DateTime? ReleaseDate { get; set; }
-        [Required]
         public DateTime? DateAdded { get; set; }
         [Display(Name = "Number in Stock")]
         [Required]
+        [Range(1, 20, ErrorMessage = "This field must be between 1 and 20.")]
         public byte InStock { get; set; }
 
     }
