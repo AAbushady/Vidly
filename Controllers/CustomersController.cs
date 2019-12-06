@@ -67,9 +67,7 @@ namespace Vidly.Controllers
         // This allows for us to return the list of customers to the view.
         public ViewResult Index()
         {
-            var customers = _context.Customers.Include(c => c.MembershipType).ToList();
-
-            return View(customers);
+            return View();
         }
 
         // This is to access the customer's details.
