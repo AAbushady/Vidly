@@ -12,6 +12,7 @@ namespace Vidly.App_Start
             // Api => Outbound
             Mapper.CreateMap<Customer, CustomerDto>();
             Mapper.CreateMap<Movie, MovieDto>();
+            Mapper.CreateMap<MembershipType, MembershipTypeDto>();
 
             // Dto to Domain
             // Api <= Inbound
