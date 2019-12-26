@@ -219,6 +219,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\CustomersController.cs" />
     <Compile Include="Controllers\Api\MoviesController.cs" />
+    <Compile Include="Controllers\Api\NewRentalController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -227,6 +228,7 @@
     <Compile Include="Dtos\GenreDto.cs" />
     <Compile Include="Dtos\MembershipTypeDto.cs" />
     <Compile Include="Dtos\MovieDto.cs" />
+    <Compile Include="Dtos\NewRentalDto.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -299,6 +301,18 @@
     <Compile Include="Migrations\201912260041352_PhoneCharacterLimitAdded.designer.cs">
       <DependentUpon>201912260041352_PhoneCharacterLimitAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912261437460_AddedNumberAvailableToMovie.cs" />
+    <Compile Include="Migrations\201912261437460_AddedNumberAvailableToMovie.designer.cs">
+      <DependentUpon>201912261437460_AddedNumberAvailableToMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912261446510_RentalAdded.cs" />
+    <Compile Include="Migrations\201912261446510_RentalAdded.designer.cs">
+      <DependentUpon>201912261446510_RentalAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912261459225_UpdateNumberAvailableWithSQLMethodForNumberAvaialbleColumn.cs" />
+    <Compile Include="Migrations\201912261459225_UpdateNumberAvailableWithSQLMethodForNumberAvaialbleColumn.designer.cs">
+      <DependentUpon>201912261459225_UpdateNumberAvailableWithSQLMethodForNumberAvaialbleColumn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ForgotPasswordViewModel.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
@@ -314,6 +328,7 @@
     <Compile Include="Models\Min18YearsIfAMember.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\RegisterViewModel.cs" />
+    <Compile Include="Models\Rental.cs" />
     <Compile Include="Models\ResetPasswordViewModel.cs" />
     <Compile Include="Models\RoleName.cs" />
     <Compile Include="Models\SendCodeViewModel.cs" />
@@ -725,6 +740,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201912260041352_PhoneCharacterLimitAdded.resx">
       <DependentUpon>201912260041352_PhoneCharacterLimitAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912261437460_AddedNumberAvailableToMovie.resx">
+      <DependentUpon>201912261437460_AddedNumberAvailableToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912261446510_RentalAdded.resx">
+      <DependentUpon>201912261446510_RentalAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912261459225_UpdateNumberAvailableWithSQLMethodForNumberAvaialbleColumn.resx">
+      <DependentUpon>201912261459225_UpdateNumberAvailableWithSQLMethodForNumberAvaialbleColumn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

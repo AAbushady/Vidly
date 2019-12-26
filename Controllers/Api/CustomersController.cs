@@ -13,10 +13,12 @@ namespace Vidly.Controllers.Api
     {
         private ApplicationDbContext _context;
 
+
         public CustomersController()
         {
             _context = new ApplicationDbContext();
         }
+
 
         // GET /api/customers
         public IHttpActionResult GetCustomers()
@@ -28,6 +30,7 @@ namespace Vidly.Controllers.Api
 
             return Ok(customerDtos);
         }
+
 
         // GET /api/customers/1
         public IHttpActionResult GetCustomer(int id)
@@ -41,6 +44,7 @@ namespace Vidly.Controllers.Api
 
             return Ok(Mapper.Map<Customer, CustomerDto>(customer));
         }
+
 
         // POST /api/customers
         [HttpPost]
@@ -59,6 +63,7 @@ namespace Vidly.Controllers.Api
 
             return Created(new Uri(Request.RequestUri + "/" + customer.Id), customerDto);
         }
+
 
         // PUT /api/customers/1
         [HttpPut]
@@ -83,6 +88,7 @@ namespace Vidly.Controllers.Api
             return StatusCode(HttpStatusCode.NoContent);
         }
 
+
         // DELETE /api/customers/1
         [HttpDelete]
         public IHttpActionResult DeleteCustomer(int id)
@@ -95,6 +101,7 @@ namespace Vidly.Controllers.Api
             }
 
             _context.Customers.Remove(customerInDb);
+
             _context.SaveChanges();
 
             return StatusCode(HttpStatusCode.NoContent);
