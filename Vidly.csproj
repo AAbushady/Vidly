@@ -274,16 +274,33 @@
     <Compile Include="Migrations\201912251920573_AddDrivingLicenseToApplicationUser.designer.cs">
       <DependentUpon>201912251920573_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912252232307_AddPhoneToUser.cs" />
+    <Compile Include="Migrations\201912252232307_AddPhoneToUser.designer.cs">
+      <DependentUpon>201912252232307_AddPhoneToUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912260041352_PhoneCharacterLimitAdded.cs" />
+    <Compile Include="Migrations\201912260041352_PhoneCharacterLimitAdded.designer.cs">
+      <DependentUpon>201912260041352_PhoneCharacterLimitAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ForgotPasswordViewModel.cs" />
+    <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\ExternalLoginConfirmationViewModel.cs" />
+    <Compile Include="Models\ExternalLoginListViewModel.cs" />
+    <Compile Include="Models\ForgotViewModel.cs" />
     <Compile Include="Models\Genre.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Min18YearsIfAMember.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\RegisterViewModel.cs" />
+    <Compile Include="Models\ResetPasswordViewModel.cs" />
     <Compile Include="Models\RoleName.cs" />
+    <Compile Include="Models\SendCodeViewModel.cs" />
+    <Compile Include="Models\VerifyCodeViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CustomerFormViewModel.cs" />
@@ -685,6 +702,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201912251920573_AddDrivingLicenseToApplicationUser.resx">
       <DependentUpon>201912251920573_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912252232307_AddPhoneToUser.resx">
+      <DependentUpon>201912252232307_AddPhoneToUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912260041352_PhoneCharacterLimitAdded.resx">
+      <DependentUpon>201912260041352_PhoneCharacterLimitAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
